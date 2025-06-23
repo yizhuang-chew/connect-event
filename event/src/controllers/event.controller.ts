@@ -33,8 +33,8 @@ export const post = async (request: Request, response: Response) => {
     ? Buffer.from(pubSubMessage.data, 'base64').toString().trim()
     : undefined;
 
-    console.log("PubSubMessage", pubSubMessage);
-    console.log("Decoded Data", decodedData);
+    logger.info("PubSubMessage", pubSubMessage);
+    logger.info("Decoded Data", decodedData);
 
   /* let customerId = undefined;
   if (decodedData) {
