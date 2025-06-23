@@ -72,4 +72,4 @@ deployAs:
 inheritAs:
   apiClient:
     scopes:
-      - manage_products
+      - manage_project
