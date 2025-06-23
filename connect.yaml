@@ -1,4 +1,10 @@
 deployAs:
+  - name: event
+    applicationType: event
+    endpoint: /event
+    scripts:
+      postDeploy: npm install && npm run build && npm run connector:post-deploy
+      preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
   #- name: assets
   #  applicationType: assets
   #- name: service
@@ -50,12 +56,6 @@ deployAs:
   #      - key: CTP_SCOPE
   #        description: commercetools Composable Commerce client scope
   #        required: true
-  - name: event
-    applicationType: event
-    endpoint: /event
-    scripts:
-      postDeploy: npm install && npm run build && npm run connector:post-deploy
-      preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
   # - name: merchant-center-custom-application
   #   applicationType: merchant-center-custom-application
   #   configuration:
